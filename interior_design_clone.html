@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Modern Living Spaces | Interior Design Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --wood: #4a1f12;
+      --accent: #f39c12;
+      --light: #f6f6f6;
+      --muted: #7a7a7a;
+      --container: 1024px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', Arial, sans-serif;
+      margin: 0;
+      color: #333;
+      background: linear-gradient(#fff, #f2f2f2);
+    }
+
+    /* HEADER */
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e6e6e6;
+    }
+
+    .topbar {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 18px;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 18px;
+    }
+
+    nav a {
+      display: block;
+      padding: 12px 14px;
+      text-decoration: none;
+      color: #222;
+      font-weight: 600;
+      border-radius: 2px;
+    }
+
+    nav a.active {
+      background: #111;
+      color: #fff;
+    }
+
+    .search {
+      border: 1px solid #ddd;
+      padding: 8px;
+      border-radius: 3px;
+    }
+
+    /* HERO with wood background */
+    .hero-wrap {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.02)), var(--wood);
+      background-image: url('/mnt/data/3.jpg');
+      background-blend-mode: overlay;
+      background-size: cover;
+      background-position: center;
+      padding: 40px 0;
+    }
+
+    .hero {
+      max-width: var(--container);
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 18px;
+      border-radius: 4px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+      display: flex;
+      gap: 18px;
+    }
+
+    .hero .main-image {
+      flex: 1;
+      padding: 8px;
+    }
+
+    .hero .main-image img {
+      width: 100%;
+      display: block;
+      border: 6px solid #fff;
+    }
+
+    .hero .thumbs {
+      width: 260px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .thumbs img {
+      width: 100%;
+      display: block;
+      border: 6px solid #fff;
+    }
+
+    /* HELLO and info row */
+    .info-row {
+      max-width: var(--container);
+      margin: 18px auto;
+      padding: 0 18px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .hello {
+      font-size: 44px;
+      color: var(--accent);
+      font-weight: 700;
+      margin-right: 18px;
+    }
+
+    .hello small {
+      display: block;
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .intro {
+      flex: 1;
+      color: #666;
+    }
+
+    /* SERVICES LIST */
+    .services {
+      background: linear-gradient(#5a2b1a, #4a1f12);
+      padding: 40px 0;
+      color: #fff;
+    }
+
+    .services .inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 0 18px;
+    }
+
+    .services h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      margin: 0 0 18px;
+    }
+
+    .service-col {
+      flex: 1;
+    }
+
+    .service-thumb {
+      width: 220px;
+      height: 140px;
+      background: #fff;
+      padding: 6px;
+      border-radius: 3px;
+    }
+
+    .service-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .service-list {
+      list-style: disc;
+      padding-left: 20px;
+      color: #ffcc80;
+    }
+
+    /* THREE COLUMNS */
+    .three-col {
+      max-width: var(--container);
+      margin: 36px auto;
+      padding: 0 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 24px;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .card h3 {
+      font-family: 'Playfair Display', serif;
+      margin-top: 0;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: #f2f2f2;
+      padding: 18px 0;
+      margin-top: 18px;
+    }
+
+    .footer-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 18px;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .hero .thumbs {
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .three-col {
+        grid-template-columns: 1fr;
+      }
+
+      .services .inner {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div class="logo"><span>ARTHUR</span> USOLTCEV <small style="font-size:12px;color:#999;margin-left:6px;">INTERIORS</small></div>
+      <nav>
+        <ul>
+          <li><a class="active" href="#">ABOUT US</a></li>
+          <li><a href="#">SERVICES</a></li>
+          <li><a href="#">CATALOGUE</a></li>
+          <li><a href="#">PRICING</a></li>
+          <li><a href="#">CONTACTS</a></li>
+        </ul>
+      </nav>
+      <div class="search">🔍</div>
+    </div>
+  </header>
+
+  <section class="hero-wrap">
+    <div class="hero">
+      <div class="main-image">
+        <!-- YouTube embedded video -->
+        <iframe width="100%" height="300" src="https://www.youtube.com/embed/9tJcXPqNawE?autoplay=1" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border:6px solid #fff;border-radius:2px;display:block"></iframe>
+      </div>
+      <div class="thumbs">
+        <!-- reuse the uploaded image as thumbnails so layout matches screenshot -->
+        <img src="1.jpg" alt="t1">
+        <img src="2.jpg" alt="t2">
+        <img src="3.jpg" alt="t3">
+        <img src="4.jpg" alt="t4">
+      </div>
+    </div>
+  </section>
+
+  <div class="info-row">
+    <div class="hello">WELCOME<small> — Your Space, Reimagined</small></div>
+    <div class="intro">I'm Arthur, an interior designer with over a decade of experience transforming homes into beautiful, functional spaces that reflect who you are. Whether you're starting from scratch or refreshing a single room, I bring creativity, precision, and genuine care to every project. Let's create something extraordinary together.</div>
+  </div>
+
+  <div style="max-width:var(--container);margin:18px auto;padding:0 18px;">
+    <audio controls style="width:300px;height:32px;">
+      <source src="1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <section class="services">
+    <div class="inner">
+      <div class="service-col">
+        <h2>What I Offer</h2>
+        <div style="display:flex;gap:18px;align-items:center">
+          <div class="service-thumb"><img src="5.jpg" alt="paint"></div>
+          <ul class="service-list">
+            <li>Full Interior Design Consultations</li>
+            <li>Custom Color Palettes & Mood Boards</li>
+          </ul>
+        </div>
+      </div>
+      <div style="flex:0 0 260px;text-align:center">
+        <img src="6.jpg" alt="person" style="max-width:220px;border-radius:4px;border:6px solid rgba(255,255,255,0.06);">
+      </div>
+      <div class="service-col">
+        <h2 style="visibility:hidden">placeholder</h2>
+        <ul class="service-list" style="list-style:none;padding-left:0;color:#ffd29a">
+          <li>Space Planning & Furniture Selection</li>
+          <li>Renovation & Remodeling Direction</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="three-col">
+    <div class="card">
+      <h3>About Me</h3>
+      <p class="muted">I'm passionate about creating spaces that balance beauty with livability. With a background in architecture and fine arts, I approach each project as a unique opportunity to understand your lifestyle and values, then translate them into a home you'll love for years to come.</p>
+    </div>
+    <div class="card">
+      <h3>What Clients Say</h3>
+      <p class="muted">"Arthur took our cramped, outdated living room and completely transformed it. He listened to what we wanted, offered honest suggestions, and delivered results that exceeded our expectations. We couldn't be happier."</p>
+      <p style="margin-top:12px;font-weight:700">Sarah & Michael Chen<br><small style="color:var(--muted);font-weight:400">Home owners, Brooklyn</small></p>
+    </div>
+    <div class="card">
+      <h3>Recent Project</h3>
+      <p class="muted"><strong>November 2025</strong><br>Completed a stunning master bedroom renovation featuring sustainable materials and a calming, spa-like aesthetic. The clients love their new sanctuary.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div>Arthur Usoltcev Interiors © 2025 &nbsp;&nbsp; <span style="color:var(--muted)">Privacy Policy</span></div>
+      <div style="font-size:20px;font-weight:700">+8(707) 991-9910</div>
+    </div>
+  </footer>
+
+</body>
+</html>
